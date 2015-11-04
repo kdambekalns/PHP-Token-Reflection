@@ -176,7 +176,7 @@ class PharTest extends Test
 	 */
 	private function cleanUpTemporaryStorage($path)
 	{
-		$iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
+		$iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path, \FilesystemIterator::SKIP_DOTS));
 		foreach ($iterator as $item) {
 			if ($item->isFile()) {
 				unlink($item->getPathName());

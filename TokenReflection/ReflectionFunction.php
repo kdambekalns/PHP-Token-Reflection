@@ -169,6 +169,11 @@ class ReflectionFunction extends ReflectionFunctionBase implements IReflectionFu
 		return true;
 	}
 
+	public function isGenerator() {
+		return false;
+	}
+	public function isVariadic() {}
+
 	/**
 	 * Processes the parent reflection object.
 	 *
